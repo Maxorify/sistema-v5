@@ -68,7 +68,7 @@ $theme-gradient-colors: (
 ////////// COLOR VARIABLES //////////
 $content-bg: #f3f4fa;
 $footer-bg: $content-bg;
-$footer-color: color(dark);
+$footer-color: map-get($theme-colors, dark);
 $border-color: #dee2e6;
 $circle-border:$white; 
 
