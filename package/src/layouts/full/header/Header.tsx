@@ -57,8 +57,8 @@ const Header = () => {
             </div>
 
             <div className="flex gap-4 items-center">
-              <Button as={Link} target="_blank" to="https://adminmart.com/product/matdash-tailwind-react-admin-template/?ref=56#product-demo-section" size={'sm'} color={"primary"} className="rounded-md py-1 px-3">
-                Check Pro Template
+              <Button as={Link} to="/upgrade" size={'sm'} color={"primary"} className="rounded-md py-1 px-3">
+                Ver versión Pro
               </Button>
               <Profile />
             </div>

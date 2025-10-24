@@ -14,6 +14,7 @@ const Table = lazy(() => import("../views/tables/Table"));
 const Form = lazy(() => import("../views/forms/Form"));
 const Shadow = lazy(() => import("../views/shadows/Shadow"));
 const Alert = lazy(() => import("../views/alerts/Alerts"));
+const Upgrade = lazy(() => import("../views/upgrade/Upgrade"));
 
 // icons
 const Solar = lazy(() => import("../views/icons/Solar"));
@@ -35,6 +36,7 @@ const Router = [
       { path: '/ui/form', exact: true, element: <Form /> },
       { path: '/ui/alert', exact: true, element: <Alert /> },
       { path: '/ui/shadow', exact: true, element: <Shadow /> },
+      { path: '/upgrade', exact: true, element: <Upgrade /> },
       { path: '/icons/solar', exact: true, element: <Solar /> },
       { path: '/sample-page', exact: true, element: <SamplePage /> },
       { path: '*', element: <Navigate to="/auth/404" /> },
