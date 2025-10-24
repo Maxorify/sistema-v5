@@ -39,7 +39,7 @@ class Navbar extends Component {
                 <Dropdown.Menu className="navbar-dropdown preview-list">
                   <Dropdown.Item className="dropdown-item  d-flex align-items-center" href="!#" onClick={evt =>evt.preventDefault()}>
                     <p className="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
-                    <span className="badge badge-pill badge-primary float-right">View all</span>
+                    <span className="badge badge-primary rounded-pill float-right">View all</span>
                   </Dropdown.Item>
                   <div className="dropdown-divider"></div>
                   <Dropdown.Item className="dropdown-item preview-item d-flex align-items-center" href="!#" onClick={evt =>evt.preventDefault()}>
@@ -80,7 +80,7 @@ class Navbar extends Component {
                 <Dropdown.Menu className="navbar-dropdown preview-list">
                   <Dropdown.Item className="dropdown-item py-3 d-flex align-items-center" href="!#" onClick={evt =>evt.preventDefault()}>
                     <p className="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
-                    <span className="badge badge-pill badge-primary float-right">View all</span>
+                    <span className="badge badge-primary rounded-pill float-right">View all</span>
                   </Dropdown.Item>
                   <div className="dropdown-divider"></div>
                   <Dropdown.Item className="dropdown-item preview-item d-flex align-items-center" href="!#" onClick={evt =>evt.preventDefault()}>
