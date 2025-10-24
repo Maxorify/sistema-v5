@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Collapse } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
 
@@ -197,4 +197,9 @@ class Sidebar extends Component {
 
 }
 
-export default withRouter(Sidebar);
+function SidebarWithLocation(props) {
+  const location = useLocation();
+  return <Sidebar {...props} location={location} />;
+}
+
+export default SidebarWithLocation;
