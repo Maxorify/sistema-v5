@@ -13,9 +13,10 @@ import "simplebar-react/dist/simplebar.min.css";
 interface SidebarLayoutProps {
   isCollapsed: boolean;
   onToggle: () => void;
+  onExpand: () => void;
 }
 
-const SidebarLayout: React.FC<SidebarLayoutProps> = ({ isCollapsed, onToggle }) => {
+const SidebarLayout: React.FC<SidebarLayoutProps> = ({ isCollapsed, onToggle, onExpand }) => {
   const filteredSidebarContent = useMemo(() => getNonProSidebarContent(), []);
 
   return (
@@ -33,14 +34,16 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({ isCollapsed, onToggle }) 
                 <div className={`transition-all duration-200 ${isCollapsed ? "flex-1 flex justify-center" : ""}`}>
                   {isCollapsed ? <Logo /> : <FullLogo />}
                 </div>
-                <button
-                  type="button"
-                  onClick={onToggle}
-                  aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-                  className={`flex h-9 w-9 items-center justify-center rounded-full border border-border text-link transition-colors duration-200 hover:border-primary hover:text-primary dark:border-darkborder dark:text-white/70 dark:hover:border-primary ${isCollapsed ? "absolute right-0" : ""}`}
-                >
-                  <Icon icon={isCollapsed ? "tabler:chevron-right" : "tabler:chevron-left"} height={20} />
-                </button>
+                {!isCollapsed && (
+                  <button
+                    type="button"
+                    onClick={onToggle}
+                    aria-label="Collapse sidebar"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-link transition-colors duration-200 hover:border-primary hover:text-primary dark:border-darkborder dark:text-white/70 dark:hover:border-primary"
+                  >
+                    <Icon icon="tabler:chevron-left" height={20} />
+                  </button>
+                )}
               </div>
             </div>
 
@@ -62,10 +65,10 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({ isCollapsed, onToggle }) 
                           <React.Fragment key={child.id ?? index}>
                             {child.children ? (
                               <div className="collpase-items">
-                                <NavCollapse item={child} isCollapsed={isCollapsed} />
+                                <NavCollapse item={child} isCollapsed={isCollapsed} onExpand={onExpand} />
                               </div>
                             ) : (
-                              <NavItems item={child} isCollapsed={isCollapsed} />
+                              <NavItems item={child} isCollapsed={isCollapsed} onExpand={onExpand} />
                             )}
                           </React.Fragment>
                         ))}

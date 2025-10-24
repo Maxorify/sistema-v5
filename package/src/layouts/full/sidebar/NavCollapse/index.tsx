@@ -8,11 +8,12 @@ import { CustomCollapse } from "../CustomCollapse";
 interface NavCollapseProps {
   item: ChildItem;
   isCollapsed?: boolean;
+  onExpand?: () => void;
 }
 
 
 
-const NavCollapse: React.FC<NavCollapseProps> = ({ item, isCollapsed = false }) => {
+const NavCollapse: React.FC<NavCollapseProps> = ({ item, isCollapsed = false, onExpand }) => {
   const location = useLocation();
   const pathname = location.pathname;
 
@@ -26,14 +27,20 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item, isCollapsed = false }) 
 
   // Close collapses when the sidebar is collapsed
   useEffect(() => {
-    if (isCollapsed && isOpen) {
+    if (isCollapsed) {
       setIsOpen(false);
     }
-  }, [isCollapsed, isOpen]);
+  }, [isCollapsed]);
 
 
   // Toggle the collapse
   const handleToggle = () => {
+    if (isCollapsed) {
+      onExpand?.();
+      setIsOpen(true);
+      return;
+    }
+
     setIsOpen((prev) => !prev);
   };
 
@@ -56,9 +63,9 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item, isCollapsed = false }) 
           {item.children.map((child: any, index: number) => (
             <React.Fragment key={child.id ?? index}>
               {child.children ? (
-                <NavCollapse item={child} isCollapsed={isCollapsed} /> // Recursive call for nested collapse
+                <NavCollapse item={child} isCollapsed={isCollapsed} onExpand={onExpand} /> // Recursive call for nested collapse
               ) : (
-                <NavItems item={child} isCollapsed={isCollapsed} />
+                <NavItems item={child} isCollapsed={isCollapsed} onExpand={onExpand} />
               )}
             </React.Fragment>
           ))}

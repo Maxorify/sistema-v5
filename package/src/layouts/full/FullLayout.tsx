@@ -20,6 +20,7 @@ const FullLayout: FC = () => {
           <Sidebar
             isCollapsed={isSidebarCollapsed}
             onToggle={() => setIsSidebarCollapsed((prev) => !prev)}
+            onExpand={() => setIsSidebarCollapsed(false)}
           />
           <div className="page-wrapper-sub flex flex-col w-full dark:bg-darkgray">
             {/* Top Header  */}

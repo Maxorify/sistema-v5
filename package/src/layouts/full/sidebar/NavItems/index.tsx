@@ -9,11 +9,19 @@ import { Link, useLocation } from "react-router";
 interface NavItemsProps {
   item: ChildItem;
   isCollapsed?: boolean;
+  onExpand?: () => void;
 }
-const NavItems: React.FC<NavItemsProps> = ({ item, isCollapsed = false }) => {
+const NavItems: React.FC<NavItemsProps> = ({ item, isCollapsed = false, onExpand }) => {
   const location = useLocation();
   const pathname = location.pathname;
   const isExternalLink = typeof item.url === "string" && item.url.startsWith("http");
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    if (isCollapsed) {
+      event.preventDefault();
+      onExpand?.();
+    }
+  };
 
   return (
     <>
@@ -22,6 +30,7 @@ const NavItems: React.FC<NavItemsProps> = ({ item, isCollapsed = false }) => {
         target={isExternalLink ? "_blank" : "_self"}
         as={Link}
         title={isCollapsed ? item.name : undefined}
+        onClick={handleClick}
         className={`${item.url == pathname
             ? "text-white bg-primary rounded-xl  hover:text-white hover:bg-primary dark:hover:text-white shadow-btnshdw active"
             : "text-link bg-transparent group/link "
