@@ -7,7 +7,6 @@ import SimpleBar from "simplebar-react";
 import React, { useMemo } from "react";
 import FullLogo from "../shared/logo/FullLogo";
 import 'simplebar-react/dist/simplebar.min.css';
-import Upgrade from "./Upgrade";
 
 const MobileSidebar = () => {
   const filteredSidebarContent = useMemo(() => getNonProSidebarContent(), []);
@@ -42,7 +41,6 @@ const MobileSidebar = () => {
               </Sidebar.ItemGroup>
             </Sidebar.Items>
           </SimpleBar>
-          <Upgrade/>
         </Sidebar>
       </div>
     </>

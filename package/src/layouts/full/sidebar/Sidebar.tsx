@@ -6,7 +6,6 @@ import NavItems from "./NavItems";
 import SimpleBar from "simplebar-react";
 import React, { useMemo } from "react";
 import FullLogo from "../shared/logo/FullLogo";
-import Upgrade from "./Upgrade";
 import NavCollapse from "./NavCollapse";
 
 const SidebarLayout = () => {
@@ -48,7 +47,6 @@ const SidebarLayout = () => {
               </Sidebar.ItemGroup>
             </Sidebar.Items>
           </SimpleBar>
-          <Upgrade/>
         </Sidebar>
       </div>
     </>
