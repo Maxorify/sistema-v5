@@ -34,8 +34,7 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item }: any) => {
       label={ `${item.name}`}
       open={isOpen}
       onClick={handleToggle}
-      icon={item.icon} 
-      isPro={item.isPro}
+      icon={item.icon}
       className={
         Boolean(activeDD)
           ? "!text-white bg-primary rounded-xl hover:bg-primary hover:text-white shadow-btnshdw"

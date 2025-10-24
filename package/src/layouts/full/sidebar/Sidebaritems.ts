@@ -1234,4 +1234,37 @@ const SidebarContent: MenuItem[] = [
   },
 ];
 
+const filterChildItems = (items: ChildItem[] = []): ChildItem[] =>
+  items.reduce<ChildItem[]>((acc, child) => {
+    if (child.isPro) {
+      return acc;
+    }
+
+    if (child.children) {
+      const filteredChildren = filterChildItems(child.children);
+
+      if (filteredChildren.length === 0) {
+        return acc;
+      }
+
+      acc.push({ ...child, children: filteredChildren });
+      return acc;
+    }
+
+    acc.push(child);
+    return acc;
+  }, []);
+
+export const getNonProSidebarContent = (): MenuItem[] =>
+  SidebarContent.reduce<MenuItem[]>((acc, menuItem) => {
+    const filteredChildren = filterChildItems(menuItem.children ?? []);
+
+    if (filteredChildren.length === 0) {
+      return acc;
+    }
+
+    acc.push({ ...menuItem, children: filteredChildren });
+    return acc;
+  }, []);
+
 export default SidebarContent;

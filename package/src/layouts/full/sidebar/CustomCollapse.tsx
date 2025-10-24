@@ -11,8 +11,7 @@ const CustomCollapse: React.FC<{
     onClick: () => void;
     icon: string;
     className?: string;
-    isPro?:boolean
-  }> = ({ label, open, onClick, icon, children, className,isPro }) => {
+  }> = ({ label, open, onClick, icon, children, className }) => {
     return (
       <div className={twMerge("transition-all duration-300")}>
         <div
@@ -24,7 +23,6 @@ const CustomCollapse: React.FC<{
             <span className="truncate max-w-28 nav-label "  >{label}</span>
           </div>
            <div className="flex items-center gap-0.5" >
-           {isPro ? <span className="py-0.5 px-2.5 text-[10px] bg-lightsecondary text-secondary rounded-sm">Pro</span> : null}
           <HiOutlineChevronDown
             className={twMerge("transform transition-transform", open ? "rotate-180" : "rotate-0")}
           />
@@ -42,4 +40,4 @@ const CustomCollapse: React.FC<{
     );
   };
 
-  export {CustomCollapse}
+export { CustomCollapse };
