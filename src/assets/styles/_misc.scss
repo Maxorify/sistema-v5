@@ -77,7 +77,7 @@ pre {
 
 code {
   padding: 5px;
-  color: theme-color(danger);
+  color: map-get($theme-colors, danger);
   font-family: $type1;
   font-weight: 300;
   font-size: $default-font-size;

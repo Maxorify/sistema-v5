@@ -93,8 +93,9 @@
   }
 
   &.btn-outline-light {
-    border-color: darken(theme-color(light), 15%);
-    color: darken(theme-color(light), 15%);
+    $light-color: map-get($theme-colors, light);
+    border-color: darken($light-color, 15%);
+    color: darken($light-color, 15%);
   }
 
   &.btn-outline-secondary {
@@ -102,7 +103,7 @@
   }
 
   &.btn-inverse-secondary {
-    background-color: rgba(theme-color(secondary), 0.5);
+    background-color: rgba(map-get($theme-colors, secondary), 0.5);
     color: rgba($black, 0.5);
 
     &:hover {
@@ -136,35 +137,35 @@
     }
 
     &.btn-primary {
-      border-color: darken(theme-color(primary), 3%);
+      border-color: darken(map-get($theme-colors, primary), 3%);
     }
 
     &.btn-secondary {
-      border-color: darken(theme-color(secondary), 3%);
+      border-color: darken(map-get($theme-colors, secondary), 3%);
     }
 
     &.btn-info {
-      border-color: darken(theme-color(info), 3%);
+      border-color: darken(map-get($theme-colors, info), 3%);
     }
 
     &.btn-warning {
-      border-color: darken(theme-color(warning), 3%);
+      border-color: darken(map-get($theme-colors, warning), 3%);
     }
 
     &.btn-success {
-      border-color: darken(theme-color(success), 3%);
+      border-color: darken(map-get($theme-colors, success), 3%);
     }
 
     &.btn-danger {
-      border-color: darken(theme-color(danger), 3%);
+      border-color: darken(map-get($theme-colors, danger), 3%);
     }
 
     &.btn-dark {
-      border-color: darken(theme-color(dark), 3%);
+      border-color: darken(map-get($theme-colors, dark), 3%);
     }
 
     &.btn-light {
-      border-color: darken(theme-color(light), 3%);
+      border-color: darken(map-get($theme-colors, light), 3%);
     }
   }
 }

@@ -37,14 +37,14 @@
 		background: transparent;
 		.form-control,
 		.input-group-text {
-			border-color: theme-color(secondary);
+                    border-color: map-get($theme-colors, secondary);
 			&:focus,
 			&:active {
-				border-color: theme-color(secondary);
+                            border-color: map-get($theme-colors, secondary);
 			}
 		}
 		select {
-			outline-color: theme-color(secondary);
+                    outline-color: map-get($theme-colors, secondary);
 		}
 	}
 	&.auth-img-bg {
