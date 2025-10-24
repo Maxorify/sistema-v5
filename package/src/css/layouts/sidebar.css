@@ -9,11 +9,15 @@
 
 .menu-sidebar {
     height: 100%;
-    width: 256px !important;
+    width: var(--sidebar-width) !important;
     background: var(--bs-white);
     top: 0;
     left: 0px;
-    transition: left .4s ease-in-out;
+    transition: width .3s ease-in-out, left .3s ease-in-out;
+}
+
+[data-sidebar-collapsed="true"] .menu-sidebar {
+    width: var(--sidebar-collapsed-width) !important;
 }
 
 .sidebar-nav .caption {
@@ -26,6 +30,17 @@
     padding-top: 0 !important;
     margin-top: 0px !important;
     border-top: 0 !important;
+}
+
+[data-sidebar-collapsed="true"] .sidebar-nav .caption {
+    border-top: 0 !important;
+    padding-top: 14px !important;
+    margin-top: 14px !important;
+}
+
+[data-sidebar-collapsed="true"] .sidebar-nav .caption:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .sidebar-dropdown li a {
