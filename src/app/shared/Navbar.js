@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Dropdown } from 'react-bootstrap';
 
+import { getImageUrl } from '../../utils/assets';
+
 class Navbar extends Component {
   toggleOffcanvas() {
     document.querySelector('.sidebar-offcanvas').classList.toggle('active');
@@ -9,7 +11,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar col-lg-12 col-12 p-lg-0 fixed-top d-flex flex-row">
         <div className="navbar-menu-wrapper d-flex align-items-center justify-content-between">
-        <a className="navbar-brand brand-logo-mini align-self-center d-lg-none" href="!#" onClick={evt =>evt.preventDefault()}><img src={require("../../assets/images/logo-mini.svg")} alt="logo" /></a>
+        <a className="navbar-brand brand-logo-mini align-self-center d-lg-none" href="!#" onClick={evt =>evt.preventDefault()}><img src={getImageUrl('logo-mini.svg')} alt="logo" /></a>
           <button className="navbar-toggler navbar-toggler align-self-center" type="button" onClick={ () => document.body.classList.toggle('sidebar-icon-only') }>
             <i className="mdi mdi-menu"></i>
           </button>
@@ -42,7 +44,7 @@ class Navbar extends Component {
                   <div className="dropdown-divider"></div>
                   <Dropdown.Item className="dropdown-item preview-item d-flex align-items-center" href="!#" onClick={evt =>evt.preventDefault()}>
                     <div className="preview-thumbnail">
-                      <img src={require("../../assets/images/faces/face10.jpg")} alt="profile" className="img-sm profile-pic" /> </div>
+                      <img src={getImageUrl('faces/face10.jpg')} alt="profile" className="img-sm profile-pic" /> </div>
                     <div className="preview-item-content flex-grow py-2">
                       <p className="preview-subject ellipsis font-weight-medium text-dark">Marian Garner </p>
                       <p className="font-weight-light small-text"> The meeting is cancelled </p>
@@ -51,7 +53,7 @@ class Navbar extends Component {
                   <div className="dropdown-divider"></div>
                   <Dropdown.Item className="dropdown-item preview-item d-flex align-items-center" href="!#" onClick={evt =>evt.preventDefault()}>
                     <div className="preview-thumbnail">
-                      <img src={require("../../assets/images/faces/face12.jpg")} alt="profile" className="img-sm profile-pic" /> </div>
+                      <img src={getImageUrl('faces/face12.jpg')} alt="profile" className="img-sm profile-pic" /> </div>
                     <div className="preview-item-content flex-grow py-2">
                       <p className="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
                       <p className="font-weight-light small-text"> The meeting is cancelled </p>
@@ -60,7 +62,7 @@ class Navbar extends Component {
                   <div className="dropdown-divider"></div>
                   <Dropdown.Item className="dropdown-item preview-item d-flex align-items-center" href="!#" onClick={evt =>evt.preventDefault()}>
                     <div className="preview-thumbnail">
-                      <img src={require("../../assets/images/faces/face1.jpg")} alt="profile" className="img-sm profile-pic" /> </div>
+                      <img src={getImageUrl('faces/face1.jpg')} alt="profile" className="img-sm profile-pic" /> </div>
                     <div className="preview-item-content flex-grow py-2">
                       <p className="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
                       <p className="font-weight-light small-text"> The meeting is cancelled </p>
@@ -117,7 +119,7 @@ class Navbar extends Component {
               <Dropdown alignRight>
                 <Dropdown.Toggle className="nav-link count-indicator bg-transparent">
                   <span className="profile-text">Richard V.Welsh !</span>
-                  <img className="img-xs rounded-circle" src={require("../../assets/images/faces/face8.jpg")} alt="Profile" />
+                  <img className="img-xs rounded-circle" src={getImageUrl('faces/face8.jpg')} alt="Profile" />
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="preview-list navbar-dropdown pb-3">
                   <Dropdown.Item className="dropdown-item p-0 preview-item d-flex align-items-center border-bottom" href="!#" onClick={evt =>evt.preventDefault()}>
