@@ -41,16 +41,16 @@
     color: $card-description-color;
   }
   &.card-outline-success {
-		border: 1px solid theme-color("success");
+             border: 1px solid map-get($theme-colors, success);
 	}
 	&.card-outline-primary {
-		border: 1px solid theme-color("primary");
+             border: 1px solid map-get($theme-colors, primary);
 	}
 	&.card-outline-warning {
-		border: 1px solid theme-color("warning");
+             border: 1px solid map-get($theme-colors, warning);
 	}
 	&.card-outline-danger {
-		border: 1px solid theme-color("danger");
+             border: 1px solid map-get($theme-colors, danger);
 	}
 	&.card-rounded {
 		@include border-radius(5px);
@@ -77,6 +77,6 @@
 
 @each $color, $value in $theme-colors {
   .card-inverse-#{$color} {
-    @include card-inverse-variant(rgba(theme-color($color), .2), theme-color-level($color, 1), theme-color-level($color, 3));
+    @include card-inverse-variant(rgba(map-get($theme-colors, $color), .2), theme-color-level($color, 1), theme-color-level($color, 3));
   }
 }

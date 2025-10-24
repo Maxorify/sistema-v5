@@ -138,10 +138,8 @@ export class BasicElements extends Component {
                     <label>File upload</label>
                     <Form.Control type="file" name="img[]" className="file-upload-default" />
                     <div className="input-group col-xs-12">
-                      <Form.Control type="text" className="form-control file-upload-info" disabled placeholder="Upload Image" /> 
-                      <span className="input-group-append">
-                        <button className="file-upload-browse btn btn-primary" type="button">Upload</button>
-                      </span>
+                      <Form.Control type="text" className="form-control file-upload-info" disabled placeholder="Upload Image" />
+                      <button className="file-upload-browse btn btn-primary" type="button">Upload</button>
                     </div>
                   </Form.Group>
                   <Form.Group>
@@ -221,48 +219,35 @@ export class BasicElements extends Component {
               <div className="card-body">
                 <h4 className="card-title">Basic input groups</h4>
                 <p className="card-description"> Basic bootstrap input groups </p>
-                <Form.Group>
-                  <div className="input-group">
-                    <div className="input-group-prepend">
+                  <Form.Group>
+                    <div className="input-group">
                       <span className="input-group-text">@</span>
+                      <Form.Control type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
                     </div>
-                    <Form.Control type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
-                  </div>
-                </Form.Group>
-                <Form.Group>
-                  <div className="input-group">
-                    <div className="input-group-prepend">
+                  </Form.Group>
+                  <Form.Group>
+                    <div className="input-group">
                       <span className="input-group-text bg-primary text-white">$</span>
-                    </div>
-                    <Form.Control type="text" className="form-control" aria-label="Amount (to the nearest dollar)" />
-                    <div className="input-group-append">
+                      <Form.Control type="text" className="form-control" aria-label="Amount (to the nearest dollar)" />
                       <span className="input-group-text">.00</span>
                     </div>
-                  </div>
-                </Form.Group>
-                <Form.Group>
-                  <div className="input-group">
-                    <div className="input-group-prepend">
+                  </Form.Group>
+                  <Form.Group>
+                    <div className="input-group">
                       <span className="input-group-text">$</span>
-                    </div>
-                    <div className="input-group-prepend">
                       <span className="input-group-text">0.00</span>
+                      <Form.Control type="text" className="form-control" aria-label="Amount (to the nearest dollar)" />
                     </div>
-                    <Form.Control type="text" className="form-control" aria-label="Amount (to the nearest dollar)" />
-                  </div>
-                </Form.Group>
-                <Form.Group>
-                  <div className="input-group">
-                  <Form.Control type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                    <div className="input-group-append">
+                  </Form.Group>
+                  <Form.Group>
+                    <div className="input-group">
+                    <Form.Control type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                       <button className="btn btn-sm btn-primary" type="button">Search</button>
                     </div>
-                  </div>
-                </Form.Group>
-                <Form.Group>
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <button className="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                  </Form.Group>
+                  <Form.Group>
+                    <div className="input-group">
+                      <button className="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                       <div className="dropdown-menu">
                         <a className="dropdown-item" href="!#" onClick={event => event.preventDefault()}>Action</a>
                         <a className="dropdown-item" href="!#" onClick={event => event.preventDefault()}>Another action</a>
@@ -270,20 +255,17 @@ export class BasicElements extends Component {
                         <div role="separator" className="dropdown-divider"></div>
                         <a className="dropdown-item" href="!#" onClick={event => event.preventDefault()}>Separated link</a>
                       </div>
+                      <Form.Control type="text" className="form-control" aria-label="Text input with dropdown button" />
                     </div>
-                    <Form.Control type="text" className="form-control" aria-label="Text input with dropdown button" />
-                  </div>
-                </Form.Group>
-                <Form.Group>
-                  <div className="input-group">
-                    <Form.Control type="text" className="form-control" placeholder="Find in facebook" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                      <div className="input-group-append">
+                  </Form.Group>
+                  <Form.Group>
+                    <div className="input-group">
+                      <Form.Control type="text" className="form-control" placeholder="Find in facebook" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                         <button className="btn btn-sm btn-facebook" type="button">
                           <i className="mdi mdi-facebook"></i>
                         </button>
-                      </div>
-                  </div>
-                </Form.Group>
+                    </div>
+                  </Form.Group>
               </div>
             </div>
           </div>
@@ -447,12 +429,10 @@ export class BasicElements extends Component {
                   <label className="sr-only" htmlFor="inlineFormInputName2">Name</label>
                   <Form.Control  type="text" className="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe" />
                   <label className="sr-only" htmlFor="inlineFormInputGroupUsername2">Username</label>
-                  <div className="input-group mb-2 mr-sm-2">
-                    <div className="input-group-prepend">
-                      <div className="input-group-text">@</div>
+                    <div className="input-group mb-2 mr-sm-2">
+                      <span className="input-group-text">@</span>
+                      <Form.Control  type="text" className="form-control" id="inlineFormInputGroupUsername2" placeholder="Username" />
                     </div>
-                    <Form.Control  type="text" className="form-control" id="inlineFormInputGroupUsername2" placeholder="Username" />
-                  </div>
                   <div className="form-check mx-sm-2">
                     <label className="form-check-label">
                       <input type="checkbox" className="form-check-input" defaultChecked/> Remember me 

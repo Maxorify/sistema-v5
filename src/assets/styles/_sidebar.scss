@@ -315,7 +315,7 @@
               background: $sidebar-dark-menu-active-bg;
 
               i {
-                color: color(gray-light);
+                color: map-get($colors, gray-light);
               }
             }
           }

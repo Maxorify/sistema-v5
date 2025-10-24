@@ -117,17 +117,17 @@
               top: -1px;
               font-size: 11px;
               color: $white;
-              background: theme-color(danger);
+              background: map-get($theme-colors, danger);
               padding-top: 2px;
             }
             &:after {
               display: none;
             }
             .count-varient1 {
-              background: theme-color(warning);
+              background: map-get($theme-colors, warning);
             }
             .count-varient2 {
-              background: theme-color(success);
+              background: map-get($theme-colors, success);
             }
           }
           i {
@@ -362,10 +362,10 @@
   //navbar color variations
   &.navbar-dark {
     .count-varient1 {
-      background: theme-color(warning);
+      background: map-get($theme-colors, warning);
     }
     .count-varient2 {
-      background: theme-color(success);
+      background: map-get($theme-colors, success);
     }
   }
 

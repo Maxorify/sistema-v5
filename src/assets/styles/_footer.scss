@@ -11,7 +11,7 @@
   font-family: $type1;
   font-weight: 400;
   a {
-    color: theme-color(success);
+    color: map-get($theme-colors, success);
     font-size: inherit;
   }
   @media (max-width: 991px) {
