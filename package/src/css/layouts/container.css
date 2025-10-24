@@ -1,8 +1,17 @@
+:root {
+    --sidebar-width: 256px;
+    --sidebar-collapsed-width: 84px;
+}
+
 .page-wrapper {
-    margin-left: 256px;
+    margin-left: var(--sidebar-width);
     transition: .2s ease-in;
     margin-right: 0px;
 
+}
+
+[data-sidebar-collapsed="true"] .page-wrapper {
+    margin-left: var(--sidebar-collapsed-width);
 }
 
 .simplebar-scrollbar:before {

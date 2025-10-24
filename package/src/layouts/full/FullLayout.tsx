@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Outlet } from "react-router";
 import ScrollToTop from 'src/components/shared/ScrollToTop';
 import Sidebar from './sidebar/Sidebar';
@@ -7,12 +7,21 @@ import Header from './header/Header';
 
 
 const FullLayout: FC = () => {
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+
   return (
     <>
-      <div className="flex w-full min-h-screen dark:bg-darkgray">
+      <div
+        className="flex w-full min-h-screen dark:bg-darkgray"
+        data-sidebar-collapsed={isSidebarCollapsed}
+      >
         <div className="page-wrapper flex w-full  ">
           {/* Header/sidebar */}
-          <Sidebar />
+          <Sidebar
+            isCollapsed={isSidebarCollapsed}
+            onToggle={() => setIsSidebarCollapsed((prev) => !prev)}
+            onExpand={() => setIsSidebarCollapsed(false)}
+          />
           <div className="page-wrapper-sub flex flex-col w-full dark:bg-darkgray">
             {/* Top Header  */}
             <Header />
