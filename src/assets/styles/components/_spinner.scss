@@ -12,8 +12,9 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    border: 0.3rem solid lighten(theme-color(primary),30%);
-    border-top-color: lighten(theme-color(primary),10%);
+    $primary-color: map-get($theme-colors, primary);
+    border: 0.3rem solid lighten($primary-color, 30%);
+    border-top-color: lighten($primary-color, 10%);
     animation: 1.5s spin infinite linear;
   }
 }

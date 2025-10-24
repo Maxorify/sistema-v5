@@ -263,7 +263,7 @@ class Buttons extends Component {
                       <div className="btn-group-vertical" role="group" aria-label="Basic example">
                         <button type="button" className="btn btn-outline-secondary">Default</button>
                         <div className="btn-group">
-                          <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+                          <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>
                           <div className="dropdown-menu">
                             <a href="!#" onClick={event => event.preventDefault()} className="dropdown-item">Go back</a>
                             <a href="!#" onClick={event => event.preventDefault()} className="dropdown-item">Delete</a>

@@ -2,27 +2,27 @@
 
 @mixin tooltip-variant($color) {
 	.tooltip-inner {
-		background:  theme-color($color);
+              background:  map-get($theme-colors, $color);
 		color: $white;
 	}
 	&.bs-tooltip-top {
     .arrow::before {
-      border-top-color: theme-color($color);
+      border-top-color: map-get($theme-colors, $color);
     }
   }
   &.bs-tooltip-right {
     .arrow::before {
-      border-right-color: theme-color($color);
+      border-right-color: map-get($theme-colors, $color);
     }
   }
   &.bs-tooltip-bottom {
     .arrow::before {
-      border-bottom-color: theme-color($color);
+      border-bottom-color: map-get($theme-colors, $color);
     }
   }
   &.bs-tooltip-left {
     .arrow::before {
-      border-left-color: theme-color($color);
+      border-left-color: map-get($theme-colors, $color);
     }
   }
 }

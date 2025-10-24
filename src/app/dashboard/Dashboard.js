@@ -443,7 +443,7 @@ toggleProBanner() {
                       <div className="mr-auto">
                         <p className="highlight-text text-white"> $168.90 </p>
                         <p className="text-white"> This Month </p>
-                        <div className="badge badge-pill"> 18% </div>
+                        <div className="badge rounded-pill"> 18% </div>
                       </div>
                       <div className="ml-auto mt-2 mt-xl-0">
                         <Sparklines data={[4,3,10,9,4,3,8,6,7,8]} style={{ width: "110px", height:"70px" }}>

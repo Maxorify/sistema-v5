@@ -1,6 +1,6 @@
 @mixin social-button($color) {
 	background: $color;
-	color: color(white);
+      color: $white;
 
 	&:hover {
 		background: darken($color, 10%);
@@ -32,11 +32,13 @@
 	background-image: none;
 	border-color: rgba($color, 0);
 
-	@include hover {
-		color: $color-hover;
-		background-color: $color;
-		border-color: $color;
-	}
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-hover;
+        background-color: $color;
+        border-color: $color;
+    }
 
 	&.disabled,
 	&:disabled {
@@ -59,11 +61,13 @@
 	background: transparent;
 	border-color: rgba($color, 0.2);
 
-	@include hover {
-		color: $color;
-		background-color: rgba($color, 0.2);
-		border-color: rgba($color, 0.2);
-	}
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color;
+        background-color: rgba($color, 0.2);
+        border-color: rgba($color, 0.2);
+    }
 
 	&.focus,
 	&:focus {
