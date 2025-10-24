@@ -12,12 +12,13 @@ interface NavItemsProps {
 const NavItems: React.FC<NavItemsProps> = ({ item }) => {
   const location = useLocation();
   const pathname = location.pathname;
+  const isExternalLink = typeof item.url === "string" && item.url.startsWith("http");
 
   return (
     <>
       <Sidebar.Item
         to={item.url}
-        target={item?.isPro ? "blank" : "_self"}
+        target={isExternalLink ? "_blank" : "_self"}
         as={Link}
         className={`${item.url == pathname
             ? "text-white bg-primary rounded-xl  hover:text-white hover:bg-primary dark:hover:text-white shadow-btnshdw active"
@@ -42,7 +43,6 @@ const NavItems: React.FC<NavItemsProps> = ({ item }) => {
               {item.name}
             </span>
           </span>
-          {item.isPro ? <span className="py-0.5 px-2.5 text-[10px] bg-lightsecondary text-secondary rounded-sm">Pro</span> : null}
         </div>
       </Sidebar.Item>
     </>
