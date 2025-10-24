@@ -10,18 +10,29 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.7",
+    "compass-mixins": "^0.12.10",
+    "font-awesome": "^4.7.0",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.9",
+    "react-chartjs-2": "^5.2.0",
+    "react-datepicker": "^7.3.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.29.0",
+    "react-sparklines": "^1.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^5.0.4",
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
+    "sass": "^1.80.6",
     "vite": "^7.1.7"
   }
 }

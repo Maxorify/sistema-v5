@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { ProgressBar } from 'react-bootstrap';
 
+import { getImageUrl } from '../../utils/assets';
+
 export class BasicTable extends Component {
   render() {
     return (
@@ -141,7 +143,7 @@ export class BasicTable extends Component {
                     <tbody>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face1.jpg")} alt="user icon" />
+                          <img src={getImageUrl('faces/face1.jpg')} alt="user icon" />
                         </td>
                         <td> Herman Beck </td>
                         <td>
@@ -152,7 +154,7 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face2.jpg")} alt="user icon" />
+                          <img src={getImageUrl('faces/face2.jpg')} alt="user icon" />
                         </td>
                         <td> Messsy Adam </td>
                         <td>
@@ -163,7 +165,7 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face3.jpg")} alt="user icon" />
+                          <img src={getImageUrl('faces/face3.jpg')} alt="user icon" />
                         </td>
                         <td> John Richards </td>
                         <td>
@@ -174,7 +176,7 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face4.jpg")} alt="user icon" />
+                          <img src={getImageUrl('faces/face4.jpg')} alt="user icon" />
                         </td>
                         <td> Peter Meggik </td>
                         <td>
@@ -185,7 +187,7 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face5.jpg")} alt="user icon" />
+                          <img src={getImageUrl('faces/face5.jpg')} alt="user icon" />
                         </td>
                         <td> Edward </td>
                         <td>
@@ -196,7 +198,7 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face6.jpg")} alt="user icon" />
+                          <img src={getImageUrl('faces/face6.jpg')} alt="user icon" />
                         </td>
                         <td> John Doe </td>
                         <td>
@@ -207,7 +209,7 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face7.jpg")} alt="user icon" />
+                          <img src={getImageUrl('faces/face7.jpg')} alt="user icon" />
                         </td>
                         <td> Henry Tom </td>
                         <td>
