@@ -17,13 +17,13 @@ export class Register extends Component {
                 <h4>New here?</h4>
                 <h6 className="font-weight-light">Signing up is easy. It only takes a few steps</h6>
                 <form className="pt-3">
-                  <div className="form-group">
+                  <div className="mb-3">
                     <input type="text" className="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username" />
                   </div>
-                  <div className="form-group">
+                  <div className="mb-3">
                     <input type="email" className="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" />
                   </div>
-                  <div className="form-group">
+                  <div className="mb-3">
                     <select className="form-control form-control-lg" id="exampleFormControlSelect2">
                       <option>Country</option>
                       <option>United States of America</option>
@@ -33,7 +33,7 @@ export class Register extends Component {
                       <option>Argentina</option>
                     </select>
                   </div>
-                  <div className="form-group">
+                  <div className="mb-3">
                     <input type="password" className="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" />
                   </div>
                   <div className="mb-4">

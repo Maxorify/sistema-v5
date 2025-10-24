@@ -68,7 +68,7 @@ $theme-gradient-colors: (
 ////////// COLOR VARIABLES //////////
 $content-bg: #f3f4fa;
 $footer-bg: $content-bg;
-$footer-color: color(dark);
+$footer-color: map-get($theme-colors, dark);
 $border-color: #dee2e6;
 $circle-border:$white; 
 
@@ -135,7 +135,7 @@ $sidebar-dark-menu-color: $white;
 $sidebar-dark-menu-active-bg: #282037;
 $sidebar-dark-menu-active-color: darken($white, 30%);
 $sidebar-dark-menu-hover-bg: lighten($sidebar-dark-bg, 10%);
-$sidebar-dark-menu-hover-color: color(white);
+$sidebar-dark-menu-hover-color: $white;
 $sidebar-dark-submenu-color: $sidebar-dark-menu-color;
 $sidebar-dark-submenu-hover-bg: initial;
 $sidebar-dark-submenu-hover-color: darken($sidebar-dark-submenu-color, 30%);
@@ -238,7 +238,7 @@ $tooltip-border-radius: .375rem;
 
 /////////  FORMS /////////
 
-$input-bg:                color(white);
+$input-bg:                $white;
 $input-border-radius:     2px;
 $input-placeholder-color: #b9b8b8;
 $input-font-size: 0.75rem;
@@ -277,7 +277,7 @@ $table-cell-padding: .9375rem;
 $table-border-color: $border-color;
 
 $table-inverse-bg: #2a2b32;
-$table-inverse-color: color(white);
+$table-inverse-color: $white;
 
 //////// TABLES ////////
 
@@ -420,7 +420,7 @@ $form-focus-bg: $white;
 $private-btn-bg:#eae2ec;
 ///////// KANBAN ///////
 
-$bullet-line-list-shape-bg: color(white) !default;
+$bullet-line-list-shape-bg: $white !default;
 
 $card-mixed-danger :linear-gradient(to bottom, #d41459 , #911a6c);
 

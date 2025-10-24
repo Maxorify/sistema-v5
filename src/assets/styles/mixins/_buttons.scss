@@ -1,6 +1,6 @@
 @mixin social-button($color) {
 	background: $color;
-	color: color(white);
+      color: $white;
 
 	&:hover {
 		background: darken($color, 10%);

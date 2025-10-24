@@ -70,7 +70,7 @@ body {
 }
 
 pre {
-  background: color(gray-lighter);
+  background: map-get($colors, gray-lighter);
   padding: 15px;
   font-size: 14px;
 }
