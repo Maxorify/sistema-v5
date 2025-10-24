@@ -78,7 +78,7 @@
 
   .completed {
     text-decoration: line-through;
-    text-decoration-color: theme-color(info);
+    text-decoration-color: map-get($theme-colors, info);
     .remove {
       @extend .text-primary;
     }
